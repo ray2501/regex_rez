@@ -363,9 +363,9 @@ static int REGEX_MAIN(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv
             int b;
             if( Tcl_GetBooleanFromObj(interp, objv[i+1], &b) ) return TCL_ERROR;
             if( b ){
-              options.set_utf8(true);
+              options.set_encoding(RE2::Options::EncodingUTF8);
             }else{
-              options.set_utf8(false);
+              options.set_encoding(RE2::Options::EncodingLatin1);
             }
         } else if( strcmp(zArg, "-posix")==0 ){
             int b;
