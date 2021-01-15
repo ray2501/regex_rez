@@ -27,7 +27,7 @@ It is a C++ library.
 This package is Tcl bindings for RE2.
 
 %prep
-%setup -q -n %{name}
+%setup -q -n %{name}-%{version}
 
 %build
 export CC=g++
