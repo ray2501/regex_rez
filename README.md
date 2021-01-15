@@ -41,7 +41,7 @@ below is an example:
 Implement commands
 =====
 
-regex::re2 expr_string ?-utf8 boolean? ?-posix boolean? ?-longest-match boolean? ?-nocase boolean?  
+regex::re2 create expr_string ?-utf8 boolean? ?-posix boolean? ?-longest-match boolean? ?-nocase boolean?  
 REGEX_HANDLE fullmatch text  
 REGEX_HANDLE partialmatch text  
 REGEX_HANDLE replace text rewrite  
