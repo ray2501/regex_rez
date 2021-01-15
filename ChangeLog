@@ -1,5 +1,7 @@
 2021-01-15  Danilo Chang
 
+    * Bump version to v0.3
+    * Add more test cases, modify README.md
     * Bump version to v0.2
     * Update -utf8 option code
 
