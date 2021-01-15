@@ -75,5 +75,33 @@ test rez-1.8 {close} {*}{
 
 #-------------------------------------------------------------------------------
 
+test rez-2.1 {option test} {*}{
+    -body {
+        set re [regex::re2 create "世界" -posix 1 -utf8 1]
+        set result [$re partialmatch "白金之星．世界"]
+        if {$result == 1} {
+             $re close
+        } else {
+            set result 1
+        }
+    }
+    -result {0}
+}
+
+test rez-2.2 {option test} {*}{
+    -body {
+        set re [regex::re2 create "Tle" -posix 1 -nocase 1]
+        set result [$re partialmatch "Cattle"]
+        if {$result == 1} {
+             $re close
+        } else {
+            set result 1
+        }
+    }
+    -result {0}
+}
+
+#-------------------------------------------------------------------------------
+
 cleanupTests
 return
