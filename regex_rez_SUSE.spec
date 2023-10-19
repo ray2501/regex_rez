@@ -13,6 +13,7 @@ URL:           https://github.com/ray2501/tclregex
 BuildRequires: autoconf
 BuildRequires: make
 BuildRequires: gcc-c++
+BuildRequires: libicu-devel
 BuildRequires: re2-devel
 BuildRequires: libstdc++-devel
 BuildRequires: tcl-devel >= 8.5
