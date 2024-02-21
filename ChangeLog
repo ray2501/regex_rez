@@ -1,5 +1,6 @@
 2024-02-21  Danilo Chang
 
+    * Update -std flag to c++17
     * Bump version to v0.5
     * Update -std flag to c++14
 

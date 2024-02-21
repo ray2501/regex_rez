@@ -149,7 +149,7 @@ SHARED_BUILD	= 1
 INCLUDES	=  -I"/usr/include" -I.
 #INCLUDES	=  -I"/usr/include" @TK_INCLUDES@ @TK_XINCLUDES@
 
-PKG_CFLAGS	=  -std=c++14
+PKG_CFLAGS	=  -std=c++17
 
 # TCL_DEFS is not strictly need here, but if you remove it, then you
 # must make sure that configure.ac checks for the necessary components

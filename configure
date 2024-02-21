@@ -5498,7 +5498,7 @@ printf "%s\n" "$ac_cv_c_bigendian" >&6; }
 
 
 
-    PKG_CFLAGS="$PKG_CFLAGS -std=c++14"
+    PKG_CFLAGS="$PKG_CFLAGS -std=c++17"
 
 
 
