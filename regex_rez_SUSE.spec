@@ -4,7 +4,7 @@
 
 Name:          regex_rez
 Summary:       Tcl bindings for RE2
-Version:       0.4
+Version:       0.5
 Release:       1
 License:       MIT
 Group:         Development/Libraries/Tcl
