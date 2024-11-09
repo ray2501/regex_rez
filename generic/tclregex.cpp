@@ -116,7 +116,7 @@ static int RE2_FUNCTION(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*ob
     case FUNC_FULLMATCH: {
       const char *match_string = NULL;
       re2::StringPiece input;
-      int len = 0;
+      Tcl_Size len = 0;
       Tcl_Obj *pResultStr = NULL;
 
       if( objc != 3 ){
@@ -149,7 +149,7 @@ static int RE2_FUNCTION(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*ob
     case FUNC_PARTIALMATCH: {
       const char *match_string = NULL;
       re2::StringPiece input;
-      int len = 0;
+      Tcl_Size len = 0;
       Tcl_Obj *pResultStr = NULL;
 
       if( objc != 3 ){
@@ -183,7 +183,7 @@ static int RE2_FUNCTION(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*ob
       const char *match_string = NULL;
       const char *match_rewrite = NULL;
       re2::StringPiece input;
-      int len = 0, len2 = 0;
+      Tcl_Size len = 0, len2 = 0;
       std::string result;
       Tcl_Obj *pResultStr = NULL;
 
@@ -229,7 +229,7 @@ static int RE2_FUNCTION(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*ob
       const char *match_string = NULL;
       const char *match_rewrite = NULL;
       re2::StringPiece input;
-      int len = 0, len2 = 0;
+      Tcl_Size len = 0, len2 = 0;
       std::string result;
       Tcl_Obj *pResultStr = NULL;
 
@@ -331,7 +331,7 @@ static int REGEX_MAIN(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv
       re2::RE2* re;
       re2::RE2::Options options;
       Tcl_HashEntry *newHashEntryPtr;
-      int len;
+      Tcl_Size len;
       char handleName[16 + TCL_INTEGER_SPACE];
       Tcl_Obj *pResultStr = NULL;
       int newvalue;
@@ -451,7 +451,7 @@ Regex_rez_Init(Tcl_Interp *interp)
 {
     Tcl_Namespace *nsPtr; /* pointer to hold our own new namespace */
 
-    if (Tcl_InitStubs(interp, "8.5", 0) == NULL) {
+    if (Tcl_InitStubs(interp, TCL_VERSION, 0) == NULL) {
 	return TCL_ERROR;
     }
 
@@ -488,7 +488,7 @@ Regex_rez_Init(Tcl_Interp *interp)
     /* Add a thread exit handler to delete hash table */
     Tcl_CreateThreadExitHandler(RE2_Thread_Exit, (ClientData)NULL);
 
-    Tcl_CreateObjCommand(interp, NS "::re2", (Tcl_ObjCmdProc *) REGEX_MAIN,
+    Tcl_CreateObjCommand(interp, "::" NS "::re2", (Tcl_ObjCmdProc *) REGEX_MAIN,
         (ClientData)NULL, (Tcl_CmdDeleteProc *)NULL);
 
     return TCL_OK;
