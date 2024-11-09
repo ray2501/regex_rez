@@ -9,7 +9,7 @@ Release:       1
 License:       MIT
 Group:         Development/Libraries/Tcl
 Source:        %name-%version.tar.gz
-URL:           https://github.com/ray2501/tclregex
+URL:           https://github.com/ray2501/regex_rez
 BuildRequires: autoconf
 BuildRequires: make
 BuildRequires: gcc-c++
