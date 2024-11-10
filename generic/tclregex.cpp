@@ -463,7 +463,7 @@ Regex_rez_Init(Tcl_Interp *interp)
      * Create the namespace named re2.
      * re2 command is too short, we need a namespace.
      */
-    nsPtr = Tcl_CreateNamespace(interp, NS, NULL, NULL);
+    nsPtr = Tcl_CreateNamespace(interp, "::" NS, NULL, NULL);
     if (nsPtr == NULL) {
         return TCL_ERROR;
     }
